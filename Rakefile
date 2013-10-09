@@ -6,7 +6,7 @@ Bundler.require
 require 'date'
 
 # Setup redis
-ENV['REDISTOGO_URL'] = 'redis://localhost:6379' unless ENV['REDISTOGO_URL']
+ENV['REDISTOGO_URL'] = 'redis://localhost:9971' unless ENV['REDISTOGO_URL']
 uri = URI.parse(ENV['REDISTOGO_URL'])
 $redis = Redis.new(host: uri.host, port: uri.port, password: uri.password)
 
